@@ -1,0 +1,17 @@
+.dashboard-wrapper{
+    display: flex;
+    
+
+}
+.userpage{
+    margin: 50px auto;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(245, 165, 18);
+}
+.dashboardimg img{
+    width: 400px;
+}

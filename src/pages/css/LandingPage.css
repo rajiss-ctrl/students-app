@@ -1,0 +1,20 @@
+
+.landingpage-wrapper{
+    width: 100%;
+    height: 100vh;
+   background: rgb(28, 28, 51);
+   color: #fff;
+}
+.landingPage-wrap{
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.landingPage-wrap .intro{
+    display: grid;
+    place-content: center;
+    padding:0 10%;
+}
+.landingPage-wrap .intro h1{
+    font-size: 40px;
+}

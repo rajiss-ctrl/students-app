@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {Routes, Route} from 'react-router-dom'
+import LandingPage from './pages/LandingPage';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import course from './db/Data'
+import Logout from './pages/Logout';
+import Courses from './pages/Courses';
+import Signup from './pages/Signup';
+// import { useState } from 'react';
 
 function App() {
+  
+  // const [courseData, setcourseData] = useState()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Routes>
+     <Route path="/" element={<LandingPage/>}/>
+     <Route path="/login" element={<Login/>}/>
+     <Route path="/logout" element={<Logout/>}/>
+     <Route path="/signup" element={<Signup/>}/>
+     <Route path="/dashboard" element={<Dashboard/>}/>
+     <Route path="/courses" element={<Courses course={course}/>}/>
+    </Routes>
+
+    </>
   );
 }
 
