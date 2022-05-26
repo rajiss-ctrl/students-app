@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/students-app/static/css/main.3b545d3c.css",
-    "main.js": "/students-app/static/js/main.c5e80600.js",
+    "main.css": "/students-app/static/css/main.47f055e9.css",
+    "main.js": "/students-app/static/js/main.c37821c1.js",
     "static/media/bandicam 2022-02-17 11-02-33-263.png": "/students-app/static/media/bandicam 2022-02-17 11-02-33-263.82e12848819842998d79.png",
     "static/media/previewimg.png": "/students-app/static/media/previewimg.6fd7b9a7330048a6ed4a.png",
     "static/media/login.png": "/students-app/static/media/login.8fd87ff0110b353e83b1.png",
     "static/media/undraw_Book_lover_re_rwjy-removebg-preview.png": "/students-app/static/media/undraw_Book_lover_re_rwjy-removebg-preview.9fb3755b0166e60029f2.png",
     "index.html": "/students-app/index.html",
-    "main.3b545d3c.css.map": "/students-app/static/css/main.3b545d3c.css.map",
-    "main.c5e80600.js.map": "/students-app/static/js/main.c5e80600.js.map"
+    "main.47f055e9.css.map": "/students-app/static/css/main.47f055e9.css.map",
+    "main.c37821c1.js.map": "/students-app/static/js/main.c37821c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b545d3c.css",
-    "static/js/main.c5e80600.js"
+    "static/css/main.47f055e9.css",
+    "static/js/main.c37821c1.js"
   ]
 }
