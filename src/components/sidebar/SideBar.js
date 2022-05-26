@@ -1,8 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { logout } from '../../Firebase'
 import './SideBar.css'
 
 const SideBar = () => {
+  let navigate = useNavigate()
+
+  async function handleLogout(){
+    try{
+      await logout()
+    }catch{
+      alert('error!')
+    }
+  navigate('/students-app')
+  }
   return (
     <div className='sidebar-wrapper'>
         <aside>
@@ -11,7 +22,7 @@ const SideBar = () => {
             <ul>
                 <li><Link to='/courses'>Courses</Link></li>
                 {/* <li><Link>Profile</Link></li> */}
-                <li><Link to='/logout'>Logout</Link></li>
+                <li onClick={handleLogout}><button>Logout</button></li>
             </ul>
         </aside>
     </div>

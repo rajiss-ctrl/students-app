@@ -2,7 +2,8 @@
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
+import {getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword} from 'firebase/auth';
+import { useState, useEffect } from "react";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB5XdjWFbKSmMUY0EmFFpybH-ES14SzxEA",
@@ -17,6 +18,24 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
+export function logout(email,password){
+    return signOut(auth);
+}
 export function Register(email,password){
     return createUserWithEmailAndPassword(auth,email,password);
+}
+export function login(email,password){
+    return signInWithEmailAndPassword(auth,email,password);
+}
+
+// get current student
+
+export function useAuth(){
+  const [currentStudent, setCurrentStudent] = useState()
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth,user =>setCurrentStudent(user))
+    return unsub;
+  }, [])
+  
+  return currentStudent
 }
