@@ -7,29 +7,42 @@ import Dashboard from './pages/Dashboard';
 import course from './db/Data'
 import Courses from './pages/Courses';
 import Signup from './pages/Signup';
-import { RoutProtect } from './RoutProtect';
-import { useAuth } from './Firebase';
+import { UserAuthContextProvider } from './context/UserAuthContext';
+import ProtectedRoute from './ProtectedRoute';
+// import { RoutProtect } from './RoutProtect';
+// import { useAuth } from './Firebase';
 
 // import { useState } from 'react';
 
 function App() {
-   const currentStudent = useAuth();
+  
+  //  const currentStudent = useAuth();
   // const [courseData, setcourseData] = useState()
   return (
-    <>
+    <UserAuthContextProvider>
     <Routes>
-      <Route element={<RoutProtect/>}>
-            <Route path='/login' element={<Login/>}/>
-      </Route>
-
      <Route path="/students-app" element={<LandingPage/>}/>
      <Route path="/login" element={<Login/>}/>
-     <Route path="/signup" element={<Signup currentStudent={currentStudent}/>}/>
-     <Route path="/dashboard" element={<Dashboard currentStudent={currentStudent}/>}/>
-     <Route path="/courses" element={<Courses course={course}/>}/>
+     <Route path="/signup" element={<Signup />}/>
+              <Route
+                path="/dashboard"
+                element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                }
+              />
+                <Route
+                 path="/courses" 
+                 element={
+                   <ProtectedRoute>
+                 <Courses course={course}/>
+                 </ProtectedRoute>
+                 }/>
+     {/* <Route path="/dashboard" element={<Dashboard />}/> */}
     </Routes>
 
-    </>
+    </UserAuthContextProvider>
   );
 }
 

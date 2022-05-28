@@ -1,43 +1,40 @@
 import React, { useState } from 'react'
-
-import { useRef } from 'react'
+// import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Register } from '../Firebase'
+import { useUserAuth } from '../context/UserAuthContext'
 import './css/Signup.css'
 
 const Signup = ({currentStudent}) => {
-  let navigate = useNavigate()
-  const [loading, setLoading]= useState(false)
+  // let navigate = useNavigate()
+  // const [loading, setLoading]= useState(false)
 
-    const emailRef= useRef()
-    const passwordRef= useRef()
+  //   const emailRef= useRef()
+  //   const passwordRef= useRef()
+    const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [password, setPassword] = useState("");
+  const { signUp } = useUserAuth();
+  let navigate = useNavigate();
 
-    async function handleSignup(e){
+    async function handleSubmit(e){
       e.preventDefault()
-      setLoading(true)
-      try {
-        
-        {
-          ( await Register(emailRef.current.value, passwordRef.current.value) )? navigate('/dashboard') : 
-          navigate('/login')
-        }
-      } catch {
-        alert('User already exist!')
-      }
-      setLoading(false)
-        // {
-        //   await Register(emailRef.current.value, passwordRef.current.value)
-        //   &&
-        //   navigate('/login')
-        // }
+       setError("");
+    try {
+      await signUp(email, password);
+      navigate("/login");
+    } catch (err) {
+      setError(err.message);
+    }
     }
   return (
     <div className='signup-wrapper'>
-        <form action="">
+       {error && <h3>{error}</h3>}
+        <form onSubmit={handleSubmit}>
             <h1>REGISTER </h1>
-            <input ref={emailRef} type="email" placeholder='Your Email' />
-            <input  ref={passwordRef} type="password" placeholder='Password' />
-            <input disabled={loading || currentStudent} onClick={handleSignup} type="submit" value="Sign Up" />
+            <input  onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Your Email' />
+            <input   onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Password' />
+            <input  type="submit" value="Sign Up" />
         </form>
     </div>
   )

@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import {getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword} from 'firebase/auth';
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB5XdjWFbKSmMUY0EmFFpybH-ES14SzxEA",
@@ -16,26 +16,28 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
+// const auth = getAuth();
+export const auth = getAuth(app);
+export default app
 
-export function logout(email,password){
-    return signOut(auth);
-}
-export function Register(email,password){
-    return createUserWithEmailAndPassword(auth,email,password);
-}
-export function login(email,password){
-    return signInWithEmailAndPassword(auth,email,password);
-}
+// export function logout(email,password){
+//     return signOut(auth);
+// }
+// export function Register(email,password){
+//     return createUserWithEmailAndPassword(auth,email,password);
+// }
+// export function login(email,password){
+//     return signInWithEmailAndPassword(auth,email,password);
+// }
 
-// get current student
+// // get current student
 
-export function useAuth(){
-  const [currentStudent, setCurrentStudent] = useState()
-  useEffect(() => {
-    const unsub = onAuthStateChanged(auth,user =>setCurrentStudent(user))
-    return unsub;
-  }, [])
+// export function useAuth(){
+//   const [currentStudent, setCurrentStudent] = useState()
+//   useEffect(() => {
+//     const unsub = onAuthStateChanged(auth,user =>setCurrentStudent(user))
+//     return unsub;
+//   }, [])
   
-  return currentStudent
-}
+//   return currentStudent
+// }

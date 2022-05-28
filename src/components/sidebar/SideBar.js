@@ -1,18 +1,22 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { logout } from '../../Firebase'
+import { useUserAuth } from '../../context/UserAuthContext'
+// import { logout } from '../../Firebase'
+
 import './SideBar.css'
 
 const SideBar = () => {
   let navigate = useNavigate()
+  const { logOut, user } = useUserAuth();
 
   async function handleLogout(){
-    try{
-      await logout()
-    }catch{
-      alert('error!')
+
+     try {
+      await logOut();
+      navigate('/students-app')
+    } catch (error) {
+      console.log(error.message);
     }
-  navigate('/students-app')
   }
   return (
     <div className='sidebar-wrapper'>
