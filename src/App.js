@@ -9,6 +9,7 @@ import Courses from './pages/Courses';
 import Signup from './pages/Signup';
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import ProtectedRoute from './ProtectedRoute';
+import CourseDetails from './pages/CourseDetails';
 // import { RoutProtect } from './RoutProtect';
 // import { useAuth } from './Firebase';
 
@@ -37,6 +38,13 @@ function App() {
                  element={
                    <ProtectedRoute>
                  <Courses course={course}/>
+                 </ProtectedRoute>
+                 }/>
+                <Route
+                 path="/courseDetails/:e" 
+                 element={
+                   <ProtectedRoute>
+                 <CourseDetails/>
                  </ProtectedRoute>
                  }/>
      {/* <Route path="/dashboard" element={<Dashboard />}/> */}
