@@ -22,7 +22,7 @@ function App() {
   return (
     <UserAuthContextProvider>
     <Routes>
-     <Route path="/students-app" element={<LandingPage/>}/>
+     <Route path="/" element={<LandingPage/>}/>
      <Route path="/login" element={<Login/>}/>
      <Route path="/signup" element={<Signup />}/>
               <Route

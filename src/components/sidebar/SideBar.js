@@ -13,7 +13,7 @@ const SideBar = () => {
 
      try {
       await logOut();
-      navigate('/students-app')
+      navigate('/')
     } catch (error) {
       console.log(error.message);
     }
