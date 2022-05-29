@@ -5,10 +5,13 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  GoogleAuthProvider,
   signOut
 } from "firebase/auth";
 import { auth } from "../Firebase";
 
+export const provider = new GoogleAuthProvider()
+// signInWithPopup,
 const userAuthContext = createContext();
 export function UserAuthContextProvider({ children }) {
   const [user, setUser] = useState({});

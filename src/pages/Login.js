@@ -7,8 +7,11 @@ import LoginAsideImg from '../images/login.png'
 import LogingFormImg from '../images/previewimg.png'
 // import { useRef } from 'react'
 // import { useUserAuth } from "./UserAuthContext";
-
+import { provider } from '../context/UserAuthContext'
 import './css/Login.css'
+import { getAuth, signInWithPopup } from 'firebase/auth'
+
+
 const Login = () => {
   let navigate = useNavigate()
    const [email, setEmail] = useState("");
@@ -26,6 +29,16 @@ async function handleLogin(e){
     } catch (err) {
       setError(err.message);
     }
+} 
+ function handleGoogleSignin(){
+  const auth= getAuth();
+  signInWithPopup(auth,provider)
+  .then((result)=>{
+    const user = result.user
+     navigate("/dashboard");
+    console.log(user)
+  })
+    
 } 
 
   return (
@@ -48,7 +61,9 @@ async function handleLogin(e){
         <Link to='/signup'><button>Register</button></Link>
         
       </div>
+      <button onClick={handleGoogleSignin}>Signin With Google</button>
       </form>
+
     </div>
   )
 }
