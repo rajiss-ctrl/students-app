@@ -10,6 +10,9 @@ import LogingFormImg from '../images/previewimg.png'
 import { provider } from '../context/UserAuthContext'
 import './css/Login.css'
 import { getAuth, signInWithPopup } from 'firebase/auth'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLock, faMailBulk, faPerson, faUnlockKeyhole, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 
 const Login = () => {
@@ -55,8 +58,14 @@ async function handleLogin(e){
       <div className="img">
         <img src={LogingFormImg} alt="" />
       </div>
-      <input   onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Enter Your Email'/>
-      <input  onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Enter Your Password' />
+      <div className="email">
+        <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Enter Your Email'/>
+        <FontAwesomeIcon icon={faUser} className="fa-1x email-icon" ></FontAwesomeIcon> 
+      </div>
+      <div className="password">
+        <input  onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Enter Your Password' />
+        <FontAwesomeIcon icon={faUnlockKeyhole} className="fa-1x pass-icon"  ></FontAwesomeIcon> 
+      </div>
       <input  type="submit" value="Login with password" />
 
       <div className="reg">
@@ -64,7 +73,10 @@ async function handleLogin(e){
         <Link to='/signup'><button>Register</button></Link>
         
       </div>
-      <button className='google' onClick={handleGoogleSignin}>Signin With Google</button>
+    <div className='google'>
+        <button onClick={handleGoogleSignin}>Signin With Google</button>
+        <FontAwesomeIcon icon={faGoogle} className="fa-1x google-icon"  ></FontAwesomeIcon> 
+    </div>
       </form>
      </div>
 

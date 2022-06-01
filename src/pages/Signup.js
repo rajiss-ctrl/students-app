@@ -3,14 +3,11 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Register } from '../Firebase'
 import { useUserAuth } from '../context/UserAuthContext'
+import Kodecamp from '../images/kodecamp.png'
 import './css/Signup.css'
 
 const Signup = ({currentStudent}) => {
-  // let navigate = useNavigate()
-  // const [loading, setLoading]= useState(false)
-
-  //   const emailRef= useRef()
-  //   const passwordRef= useRef()
+ 
     const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
@@ -31,6 +28,7 @@ const Signup = ({currentStudent}) => {
     <div className='signup-wrapper'>
        {error && <h3>{error}</h3>}
         <form onSubmit={handleSubmit}>
+          <img src={Kodecamp} alt="" />
             <h1>REGISTER </h1>
             <input  onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Your Email' />
             <input   onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Password' />
