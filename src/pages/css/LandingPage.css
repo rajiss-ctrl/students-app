@@ -1,8 +1,8 @@
 
 .landingpage-wrapper{
     width: 100%;
-    height: 100vh;
-   background: rgb(28, 28, 51);
+    height: 100%;
+   background:#000080;
    color: #fff;
 }
 .landingPage-wrap{
@@ -16,5 +16,24 @@
     padding:0 10%;
 }
 .landingPage-wrap .intro h1{
-    font-size: 40px;
+    font-size: 60px;
+}
+.landingPage-wrap .intro h1 strong,.landingPage-wrap .intro h1 span{
+    color: #7cfc00;
+}
+.intro-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ 
+}
+ img.kodecamp{
+     position: absolute;
+  text-align: center;
+    width: 100px;
+    height: 70px;
+    bottom: 0px;
+    border: 1px solid #fff;
 }

@@ -13,7 +13,8 @@ const {user} = useUserAuth();
       <SideBar/>
       <div className="userpage">
         <div className="welcome">
-         <h1> welcome { user.email} </h1>
+         <h1> welcome </h1>
+         <h3> { user.displayName}</h3>
         </div>
         <div className="dashboardimg">
           <img src={BookLover} alt="" />

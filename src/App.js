@@ -10,6 +10,7 @@ import Signup from './pages/Signup';
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import ProtectedRoute from './ProtectedRoute';
 import CourseDetails from './pages/CourseDetails';
+import ProfilePage from './pages/ProfilePage';
 // import { RoutProtect } from './RoutProtect';
 // import { useAuth } from './Firebase';
 
@@ -25,6 +26,7 @@ function App() {
      <Route path="/" element={<LandingPage/>}/>
      <Route path="/login" element={<Login/>}/>
      <Route path="/signup" element={<Signup />}/>
+     <Route path="/profilepage" element={<ProfilePage/>}/>
               <Route
                 path="/dashboard"
                 element={
@@ -41,7 +43,7 @@ function App() {
                  </ProtectedRoute>
                  }/>
                 <Route
-                 path="/courseDetails/:e" 
+                 path="/coursedetails" 
                  element={
                    <ProtectedRoute>
                  <CourseDetails/>

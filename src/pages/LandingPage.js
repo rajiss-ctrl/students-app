@@ -1,6 +1,7 @@
 import React from 'react'
 import LandigNavbar from '../components/navbar/Landingnavbar'
 import LandingImg from '../images/bandicam 2022-02-17 11-02-33-263.png'
+import KodecampImg from '../images/kodecamp.png'
 import './css/LandingPage.css'
 
 
@@ -17,6 +18,7 @@ const LandingPage = () => {
           </div>
           <div className="intro-img">
             <img src={LandingImg} alt="" />
+              <img className="kodecamp" src={KodecampImg} alt="" />
           </div>
         </div>
     </div>

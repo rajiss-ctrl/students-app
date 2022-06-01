@@ -1,9 +1,29 @@
 .login-wrapper{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
+    background: #000080;
+}
+.login-wrapper .content{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 20px;
+}
+a.close{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: grey;
+    font-weight: normal;
 }
 .login-wrapper aside {
     text-align: center;
@@ -15,6 +35,10 @@
     flex-direction: column;
     
 }
+.login-wrapper .content aside img{
+    margin-top: 30px;
+    width: 250px;
+}
 .login-wrapper form .img{
     text-align: center;
 }
@@ -22,10 +46,28 @@
     width: 100px;
 }
 
-.login-wrapper form input{
+.login-wrapper form input[type=email],
+.login-wrapper form input[type=password]{
     width: 100%;
     padding: 5px 10px;
-    margin-top: 15px;
+    margin-top: 25px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+}
+input[type=submit]{
+    margin-top: 25px;
+    border: 1px solid black;
+    background: navy;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px ;
+    text-align: left;
+    cursor: pointer;
+}
+.login-wrapper form{
+    margin: 50px 0;
+    width: 40%;
 }
 .login-wrapper form .reg{
  display: flex;
@@ -38,6 +80,21 @@
     border: none;
     background: transparent;
     color: #000000;
+   cursor: pointer;
+    
+}
+.google{
+    outline:none ;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    border: 1px solid black;
+    background: linear-gradient(green, blue);
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
 }
 
 

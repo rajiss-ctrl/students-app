@@ -1,3 +1,6 @@
+.courses-container{
+    background: #0f0f23;
+}
 .courses-wrapper{
     width: 100%;
     height: 100vh;
@@ -7,10 +10,31 @@
 }
 .courses-wrapper .courses {
     width: 180px;
-        height: 180px;
-        margin: 10px;
-        background: red;
+    height: 180px;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+    background: #3e2c88;
+    border-radius: 15px;
 }
-.courses-wrapper .course .card{
-   
+.courses-container h2{
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+.courses-wrapper .courses .card{
+  margin-top: 15px;
+  display: grid;
+  place-content: center;
+ 
+}
+
+.courses-wrapper a{
+    position: absolute;
+    bottom: 60px;
+    left: 200px;
+}
+.courses-wrapper a{
+    text-decoration: none;
+    color: #fff;
 }

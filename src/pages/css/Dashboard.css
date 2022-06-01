@@ -1,17 +1,30 @@
 .dashboard-wrapper{
     display: flex;
-    
+    background: #09091c;
 
 }
 .userpage{
-    margin: 50px auto;
-    width: 80%;
-    height: 80vh;
+    margin:  auto auto;
+    width: 60%;
+    height: 60vh;
+    border-radius: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: rgb(245, 165, 18);
+    background: linear-gradient(90deg, #3feb7b 35%, #1374b1);
 }
 .dashboardimg img{
     width: 400px;
+}
+.welcome{
+    margin-top: -50px;
+}
+
+.welcome h1{
+    color: #fff;
+    font-size: 60px;
+}
+.welcome h3{
+    color: #333533;
+    font-size: 25px;
 }

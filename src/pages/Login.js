@@ -14,7 +14,7 @@ import { getAuth, signInWithPopup } from 'firebase/auth'
 
 const Login = () => {
   let navigate = useNavigate()
-   const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { logIn } = useUserAuth();
@@ -29,7 +29,8 @@ async function handleLogin(e){
     } catch (err) {
       setError(err.message);
     }
-} 
+ } 
+
  function handleGoogleSignin(){
   const auth= getAuth();
   signInWithPopup(auth,provider)
@@ -39,11 +40,13 @@ async function handleLogin(e){
     console.log(user)
   })
     
-} 
+  } 
 
   return (
     <div className='login-wrapper'>
-      <aside>
+     <div className="content">
+                  <Link className="close" to='/'><h1 >X</h1></Link>
+        <aside>
         <h2>Student Login</h2>
         <p>Make sure your account is secured</p>
         <img src={LoginAsideImg} alt="" />
@@ -52,17 +55,18 @@ async function handleLogin(e){
       <div className="img">
         <img src={LogingFormImg} alt="" />
       </div>
-      <input   onChange={(e) => setEmail(e.target.value)} type="email" />
-      <input  onChange={(e) => setPassword(e.target.value)} type="password" />
-      <input  type="submit" value="LOGIN" />
+      <input   onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Enter Your Email'/>
+      <input  onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Enter Your Password' />
+      <input  type="submit" value="Login with password" />
 
       <div className="reg">
         <button>Forget Password</button>
         <Link to='/signup'><button>Register</button></Link>
         
       </div>
-      <button onClick={handleGoogleSignin}>Signin With Google</button>
+      <button className='google' onClick={handleGoogleSignin}>Signin With Google</button>
       </form>
+     </div>
 
     </div>
   )
