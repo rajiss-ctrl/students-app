@@ -1,59 +1,28 @@
+import React from 'react'
 
-import './App.css';
-import {Routes, Route} from 'react-router-dom'
-import LandingPage from './pages/LandingPage';
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
-import course from './db/Data'
-import Courses from './pages/Courses';
-import Signup from './pages/Signup';
-import { UserAuthContextProvider } from './context/UserAuthContext';
-import ProtectedRoute from './ProtectedRoute';
-import CourseDetails from './pages/CourseDetails';
-import ProfilePage from './pages/ProfilePage';
-// import { RoutProtect } from './RoutProtect';
-// import { useAuth } from './Firebase';
 
-// import { useState } from 'react';
-
-function App() {
-  
-  //  const currentStudent = useAuth();
-  // const [courseData, setcourseData] = useState()
+import './App.css'
+import { useState } from 'react';
+import Navbar from './components/navbar/Navbar';
+import HeroSection from './components/hero/HeroSection';
+import StoreSection from './components/storesection/StoreSection';
+import Footer from './components/footer/Footer';
+import Subscribe from './components/subscription/Subscribe';
+const App = () => {
+  const [alert, setAlert] = useState("")
+  const handleClick = ()=>{
+    let message = 'please check your email!';
+    setAlert(message)
+  }
   return (
-    <UserAuthContextProvider>
-    <Routes>
-     <Route path="/" element={<LandingPage/>}/>
-     <Route path="/login" element={<Login/>}/>
-     <Route path="/signup" element={<Signup />}/>
-     <Route path="/profilepage" element={<ProfilePage/>}/>
-              <Route
-                path="/dashboard"
-                element={
-                  <ProtectedRoute>
-                    <Dashboard />
-                  </ProtectedRoute>
-                }
-              />
-                <Route
-                 path="/courses" 
-                 element={
-                   <ProtectedRoute>
-                 <Courses course={course}/>
-                 </ProtectedRoute>
-                 }/>
-                <Route
-                 path="/coursedetails" 
-                 element={
-                   <ProtectedRoute>
-                 <CourseDetails/>
-                 </ProtectedRoute>
-                 }/>
-     {/* <Route path="/dashboard" element={<Dashboard />}/> */}
-    </Routes>
-
-    </UserAuthContextProvider>
-  );
+    <div>
+     <Navbar/>
+    <HeroSection alert={alert} handleClick={handleClick}/>
+    <StoreSection/>
+    <Subscribe alert={alert} handleClick={handleClick}/>
+    <Footer />
+    </div>
+  )
 }
 
-export default App;
+export default App
