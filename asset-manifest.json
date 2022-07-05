@@ -1,17 +1,23 @@
 {
   "files": {
-    "main.css": "/students-app/static/css/main.531d591d.css",
-    "main.js": "/students-app/static/js/main.a33bbba8.js",
-    "static/media/login.png": "/students-app/static/media/login.c3900ce30688aa656b18.png",
-    "static/media/bandicam 2022-02-17 11-02-33-263.png": "/students-app/static/media/bandicam 2022-02-17 11-02-33-263.82e12848819842998d79.png",
-    "static/media/previewimg.png": "/students-app/static/media/previewimg.6fd7b9a7330048a6ed4a.png",
-    "static/media/undraw_Book_lover_re_rwjy-removebg-preview.png": "/students-app/static/media/undraw_Book_lover_re_rwjy-removebg-preview.9fb3755b0166e60029f2.png",
-    "index.html": "/students-app/index.html",
-    "main.531d591d.css.map": "/students-app/static/css/main.531d591d.css.map",
-    "main.a33bbba8.js.map": "/students-app/static/js/main.a33bbba8.js.map"
+    "main.css": "/filesbank/static/css/main.2fc3a3e9.css",
+    "main.js": "/filesbank/static/js/main.64eb2887.js",
+    "static/media/illustration-2.svg": "/filesbank/static/media/illustration-2.b324b94fb774ac9168ed81975d00bf9b.svg",
+    "static/media/illustration-1.svg": "/filesbank/static/media/illustration-1.6116277604b9ec95b6d3fb87653b13ce.svg",
+    "static/media/logo.svg": "/filesbank/static/media/logo.866a54e86714017bd7aef91a0912839d.svg",
+    "static/media/logofooter.svg": "/filesbank/static/media/logofooter.e9895105923b61f623e401093b9f29eb.svg",
+    "static/media/icon-arrow.svg": "/filesbank/static/media/icon-arrow.c55952488893434f4b5ee55ca73b2911.svg",
+    "index.html": "/filesbank/index.html",
+    "static/media/icon-phone.svg": "/filesbank/static/media/icon-phone.43c05d1a510cada2b8f305cbb2278ae4.svg",
+    "static/media/bg-curve-desktop.svg": "/filesbank/static/media/bg-curve-desktop.37e8a6453c888162376f.svg",
+    "static/media/bg-curve-mobile.svg": "/filesbank/static/media/bg-curve-mobile.5397c1fb22bf1a658827.svg",
+    "static/media/icon-email.svg": "/filesbank/static/media/icon-email.19ab894b09784943bec7e08b3e1344a3.svg",
+    "static/media/icon-quotes.svg": "/filesbank/static/media/icon-quotes.fefaf075deb7ea02d1f34e3bb4c10291.svg",
+    "main.2fc3a3e9.css.map": "/filesbank/static/css/main.2fc3a3e9.css.map",
+    "main.64eb2887.js.map": "/filesbank/static/js/main.64eb2887.js.map"
   },
   "entrypoints": [
-    "static/css/main.531d591d.css",
-    "static/js/main.a33bbba8.js"
+    "static/css/main.2fc3a3e9.css",
+    "static/js/main.64eb2887.js"
   ]
 }
