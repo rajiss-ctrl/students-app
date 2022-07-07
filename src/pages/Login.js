@@ -56,22 +56,21 @@ async function handleLogin(e){
       </aside>
       <form onSubmit={handleLogin}>
       <div className="img">
-        <img src={LogingFormImg} alt="" />
+          <img src={LogingFormImg} alt="" />
       </div>
       <div className="email">
-        <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Enter Your Email'/>
-        <FontAwesomeIcon icon={faUser} className="fa-1x email-icon" ></FontAwesomeIcon> 
+          <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Enter Your Email'/>
+          <FontAwesomeIcon icon={faUser} className="fa-1x email-icon" ></FontAwesomeIcon> 
       </div>
       <div className="password">
-        <input  onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Enter Your Password' />
-        <FontAwesomeIcon icon={faUnlockKeyhole} className="fa-1x pass-icon"  ></FontAwesomeIcon> 
+          <input  onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Enter Your Password' />
+          <FontAwesomeIcon icon={faUnlockKeyhole} className="fa-1x pass-icon"  ></FontAwesomeIcon> 
       </div>
-      <input  type="submit" value="Login with password" />
+          <input  type="submit" value="Login with password" />
 
       <div className="reg">
-        <button>Forget Password</button>
-        <Link to='/signup'><button>Register</button></Link>
-        
+          <button>Forget Password</button>
+          <Link to='/signup'><button>Register</button></Link>
       </div>
     <div className='google'>
         <button onClick={handleGoogleSignin}>Signin With Google</button>

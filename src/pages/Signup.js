@@ -8,7 +8,7 @@ import './css/Signup.css'
 
 const Signup = ({currentStudent}) => {
  
-    const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
   const { signUp } = useUserAuth();

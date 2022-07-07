@@ -1,9 +1,10 @@
 
 .landingpage-wrapper{
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
    background:#000080;
    color: #fff;
+    overflow: hidden;
 }
 .landingPage-wrap{
     padding: 50px;
@@ -14,6 +15,7 @@
     display: grid;
     place-content: center;
     padding:0 10%;
+    margin: auto;
 }
 .landingPage-wrap .intro h1{
     font-size: 60px;
@@ -27,7 +29,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
- 
+
 }
  img.kodecamp{
      position: absolute;
@@ -37,3 +39,55 @@
     bottom: 0px;
     border: 1px solid #fff;
 }
+
+@media screen and (max-width:1024px){
+.landingPage-wrap {
+    padding: 10px 20px 0px 20px;   
+    }
+        /* .intro-img {
+            margin: auto;
+        } */
+        .intro-img img{
+                    width: 450px;
+                }
+         .landingPage-wrap .intro h1 {
+            font-size: 45px;
+             }
+                 img.kodecamp {
+                     width: 80px;
+                     height: 70px;
+                 }
+          
+}
+@media screen and (max-width:912px){
+.landingPage-wrap {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+         .intro-img {
+             /* padding-right: 0px; */
+             text-align: center;
+         }
+        .landingPage-wrap .intro h1 {
+            /* to put the h1 in the middle  */
+            width: 100%;
+            font-size: 70px;
+            text-align: center;
+
+        }
+        .landingPage-wrap .intro p {
+            text-align: center;
+            padding: 20px;
+        }
+}
+@media screen and (max-width:600px){
+.landingPage-wrap .intro h1{
+    font-size: 40px;
+}
+ .landingPage-wrap .intro p {
+     padding: 10px 2px;
+ }
+}
+
+@media screen and (max-width:414px) {}

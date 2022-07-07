@@ -30,7 +30,7 @@
 .signup-wrapper form input[type=submit] {
     margin-top: 25px;
     border: 1px solid #2c2828;
-    background: navy;
+    background: #000080;
     color: #fff;
     padding: 10px 15px;
     text-align: left;
@@ -39,4 +39,10 @@
 .signup-wrapper form input[type=submit]:hover{
     background: #5d5ddf;
 
+}
+
+@media screen and (max-width:768px) {
+.signup-wrapper form{
+    width: 90%;
+}
 }

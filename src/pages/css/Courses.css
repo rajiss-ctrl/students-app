@@ -1,4 +1,6 @@
 .courses-container{
+    width: 100%;
+    min-height: 1200px;
     background: #0f0f23;
 }
 .courses-wrapper{
@@ -7,11 +9,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .courses-wrapper .courses {
     width: 180px;
     height: 180px;
-    margin: 10px;
+    margin:  10px;
     text-align: center;
     color: #fff;
     background: #3e2c88;
@@ -26,7 +29,6 @@
   margin-top: 15px;
   display: grid;
   place-content: center;
- 
 }
 
 .courses-wrapper a{

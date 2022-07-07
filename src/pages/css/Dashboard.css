@@ -1,7 +1,9 @@
 .dashboard-wrapper{
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     background: #09091c;
-
+    overflow: hidden;
 }
 .userpage{
     margin:  auto auto;
@@ -12,6 +14,7 @@
     justify-content: space-around;
     align-items: center;
     background: linear-gradient(90deg, #3feb7b 35%, #1374b1);
+    padding-left: 60px;
 }
 .dashboardimg img{
     width: 400px;
@@ -19,7 +22,6 @@
 .welcome{
     margin-top: -50px;
 }
-
 .welcome h1{
     color: #fff;
     font-size: 60px;
@@ -27,4 +29,35 @@
 .welcome h3{
     color: #333533;
     font-size: 25px;
+}
+
+@media screen and (max-width:912px) {
+.dashboard-wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+        .userpage{
+            width: 90%;
+            flex-direction: column;
+            /* to cancel the left margin in small devices */
+            padding-left: 0;
+        }
+                .welcome {
+                    margin-top: 50px;
+                }
+
+}
+@media screen and (max-width:280px){
+    .welcome{
+        text-align: center;
+    }
+        .welcome h1{
+            font-size: 30px;
+        }
+        .welcome h3{
+            font-size: 18px;
+        }
+                .dashboardimg img {
+                    width: 250px;
+                }
 }

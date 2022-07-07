@@ -48,3 +48,9 @@ aside ul{
     color: #fff;
     cursor: pointer;
 }
+@media screen and (max-width:912px) {
+.sidebar-wrapper {
+       display: none;
+    }
+
+}
