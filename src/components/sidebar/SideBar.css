@@ -1,7 +1,7 @@
 .sidebar-wrapper{
     width: 200px;
     height: 100vh;
-    background: #000080;
+    background: #1374b1;
 }
 .sidebar-wrapper aside{
     height: 100%;
@@ -22,7 +22,7 @@
 }
 .sidebar-wrapper aside ul li {
     list-style: none;
-    margin-top: 20px;
+    margin-top: 70px;
     cursor: pointer;
     border: none;
 }
@@ -32,25 +32,50 @@
 .sidebar-wrapper aside ul li a{
 text-decoration: none;
 color:#fff;
-
+display: flex;
+align-items: center;
+font-size: 18px;
+}
+.sidebar-wrapper aside ul li a span{
+    margin-left: 10px;
 }
 
 aside ul{
     margin-top: -200px;
     text-align: left;
 }
-
-.sidebar-wrapper button{
+.sidebar-wrapper .logout{
     margin-bottom: 40px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar-wrapper .logout button{
+    font-size: 18px;
+}
+.sidebar-wrapper button{
+    margin-left: 10px;
     outline: none;
     border: none;
     background: transparent;
     color: #fff;
     cursor: pointer;
 }
-@media screen and (max-width:912px) {
+
+@media screen and (max-width:600px){
 .sidebar-wrapper {
-       display: none;
+width: 160px;
     }
+.cname h1 {
+font-size: 14px;
+}
+.sidebar-wrapper aside ul li a {
+    font-size: 16px;
+}
+.sidebar-wrapper .logout button {
+    font-size: 16px;
+}
 
 }

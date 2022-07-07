@@ -5,6 +5,10 @@
     background: #09091c;
     overflow: hidden;
 }
+ .toggle-wrapper{
+display: none;
+}
+
 .userpage{
     margin:  auto auto;
     width: 60%;
@@ -42,10 +46,42 @@
             /* to cancel the left margin in small devices */
             padding-left: 0;
         }
-                .welcome {
-                    margin-top: 50px;
-                }
+    .welcome {
+        margin-top: 50px;
+    }
+    /* id to style the sidebar */
+  #sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .3s ease-in-out;
+  }
+  /* icon parent div */
+    .toggle-wrapper {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #fff;
+        transition: all .3s ease-in-out;
+    }
+    /* icon parent and dynamic css classname assignment with tenary op to toggle open and close */
+    .togOp{
+        display: block;
+        opacity: 1;
+        color:"#fff";
+        transition: all .3s ease-in-out;
+    }
+    .togClo{
+        display: none;
+        opacity: 0;
+        color:"#fff";
+        transition: all .3s ease-in-out;
+    }
 
+    /* .dashboad-sidebar {
+        display: none;
+    } */
 }
 @media screen and (max-width:280px){
     .welcome{

@@ -10,9 +10,11 @@ import LogingFormImg from '../images/previewimg.png'
 import { provider } from '../context/UserAuthContext'
 import './css/Login.css'
 import { getAuth, signInWithPopup } from 'firebase/auth'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock, faMailBulk, faPerson, faUnlockKeyhole, faUser } from '@fortawesome/free-solid-svg-icons'
-import { faGoogle } from '@fortawesome/free-brands-svg-icons'
+import {FaLock} from 'react-icons/fa'
+import {FaUser} from 'react-icons/fa'
+import {FaGoogle} from 'react-icons/fa'
+import {FaTimes} from 'react-icons/fa'
+
 
 
 const Login = () => {
@@ -48,7 +50,7 @@ async function handleLogin(e){
   return (
     <div className='login-wrapper'>
      <div className="content">
-                  <Link className="close" to='/'><h1 >X</h1></Link>
+                  <Link className="close" to='/'><h1 ><FaTimes/></h1></Link>
         <aside>
         <h2>Student Login</h2>
         <p>Make sure your account is secured</p>
@@ -60,11 +62,12 @@ async function handleLogin(e){
       </div>
       <div className="email">
           <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Enter Your Email'/>
-          <FontAwesomeIcon icon={faUser} className="fa-1x email-icon" ></FontAwesomeIcon> 
+          {/* <FontAwesomeIcon icon={faUser} className="fa-1x email-icon" ></FontAwesomeIcon>  */}
+          <FaLock/>
       </div>
       <div className="password">
           <input  onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Enter Your Password' />
-          <FontAwesomeIcon icon={faUnlockKeyhole} className="fa-1x pass-icon"  ></FontAwesomeIcon> 
+          <FaUser/>
       </div>
           <input  type="submit" value="Login with password" />
 
@@ -74,7 +77,8 @@ async function handleLogin(e){
       </div>
     <div className='google'>
         <button onClick={handleGoogleSignin}>Signin With Google</button>
-        <FontAwesomeIcon icon={faGoogle} className="fa-1x google-icon"  ></FontAwesomeIcon> 
+        {/* <FontAwesomeIcon icon={faGoogle} className="fa-1x google-icon"  ></FontAwesomeIcon>  */}
+    <FaGoogle/>
     </div>
       </form>
      </div>
