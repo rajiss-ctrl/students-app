@@ -30,8 +30,8 @@ const Signup = ({currentStudent}) => {
         <form onSubmit={handleSubmit}>
           <img src={Kodecamp} alt="" />
             <h1>REGISTER </h1>
-            <input  onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Your Email' />
-            <input   onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Password' />
+            <input  onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Your Email' required/>
+            <input   onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Password' required/>
             <input  type="submit" value="Sign Up" />
         </form>
     </div>

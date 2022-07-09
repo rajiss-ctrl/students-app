@@ -14,7 +14,7 @@
 .landingPage-wrap .intro{
     display: grid;
     place-content: center;
-    padding:0 10%;
+    padding:0 8%;
     margin: auto;
 }
 .landingPage-wrap .intro h1{

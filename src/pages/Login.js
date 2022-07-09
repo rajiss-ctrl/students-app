@@ -17,7 +17,7 @@ import {FaTimes} from 'react-icons/fa'
 
 
 
-const Login = () => {
+const Login = ({handleValidation,userData}) => {
   let navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -50,7 +50,7 @@ async function handleLogin(e){
   return (
     <div className='login-wrapper'>
      <div className="content">
-                  <Link className="close" to='/'><h1 ><FaTimes/></h1></Link>
+          <Link className="close" to='/'><h1 ><FaTimes/></h1></Link>
         <aside>
         <h2>Student Login</h2>
         <p>Make sure your account is secured</p>
@@ -61,12 +61,11 @@ async function handleLogin(e){
           <img src={LogingFormImg} alt="" />
       </div>
       <div className="email">
-          <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Enter Your Email'/>
-          {/* <FontAwesomeIcon icon={faUser} className="fa-1x email-icon" ></FontAwesomeIcon>  */}
+          <input onChange={(e) => setEmail(e.target.value)}  type="email" placeholder='Enter Your Email' required/>
           <FaLock/>
       </div>
       <div className="password">
-          <input  onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Enter Your Password' />
+          <input  onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Enter Your Password' required/>
           <FaUser/>
       </div>
           <input  type="submit" value="Login with password" />
@@ -77,7 +76,6 @@ async function handleLogin(e){
       </div>
     <div className='google'>
         <button onClick={handleGoogleSignin}>Signin With Google</button>
-        {/* <FontAwesomeIcon icon={faGoogle} className="fa-1x google-icon"  ></FontAwesomeIcon>  */}
     <FaGoogle/>
     </div>
       </form>

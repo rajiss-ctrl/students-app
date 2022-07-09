@@ -23,7 +23,7 @@ const {user} = useUserAuth();
               <FaBars/>
         </div>
         </div>
-      <div id="sidebar" className={  open ? "togOp" : "togClo"}>
+      <div id="sidebar" className={  open ? "sidetogOp" : "sidetogClo"}>
         <SideBar open={open}/>
       </div>
       
